@@ -1,19 +1,12 @@
-import { assert, describe, expect, it } from "vitest";
+import { expect, test } from "vitest";
 
-describe("suite name", () => {
-  it("foo", () => {
-    assert.equal(Math.sqrt(4), 2);
-  });
+const even_or_odd = (number) => {
+  // Your solution
+};
 
-  it("bar", () => {
-    expect(1 + 1).eq(2);
-  });
-
-  it("dude", () => {
-    expect(2 + 2).eq(10);
-  });
-
-  it("snapshot", () => {
-    expect({ foo: "bar" }).toMatchSnapshot();
-  });
+test("2. Even or Odd", () => {
+  expect(even_or_odd(0)).eq("Even");
+  expect(even_or_odd(2)).eq("Even");
+  expect(even_or_odd(3)).eq("Odd");
+  expect(even_or_odd(-3)).eq("Odd");
 });

@@ -1,15 +1,13 @@
-import { assert, describe, expect, it } from "vitest";
+import { expect, test } from "vitest";
 
-describe("suite name", () => {
-  it("foo", () => {
-    assert.equal(Math.sqrt(4), 2);
-  });
+const solution = (number) => {
+  // your solution
+};
 
-  it("bar", () => {
-    expect(1 + 1).eq(4);
-  });
-
-  it("snapshot", () => {
-    expect({ foo: "bar" }).toMatchSnapshot();
-  });
+test("1. Multiples of 3 or 5", () => {
+  expect(solution(0)).eq(0);
+  expect(solution(-15)).eq(0);
+  expect(solution(10)).eq(23);
+  expect(solution(20)).eq(78);
+  expect(solution(200)).eq(9168);
 });
