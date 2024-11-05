@@ -10,7 +10,7 @@ describe("suite name", () => {
   });
 
   it("dude", () => {
-    expect(2 + 2).eq(4);
+    expect(2 + 2).eq(10);
   });
 
   it("snapshot", () => {
