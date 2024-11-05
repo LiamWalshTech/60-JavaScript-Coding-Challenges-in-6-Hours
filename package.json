@@ -5,9 +5,9 @@
   "license": "MIT",
   "main": "index.js",
   "scripts": {
-    "test": "vitest --host",
-    "test:ui": "vitest --ui --host",
-    "test:run": "vitest run --host"
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run"
   },
   "devDependencies": {
     "@vitest/ui": "latest",
