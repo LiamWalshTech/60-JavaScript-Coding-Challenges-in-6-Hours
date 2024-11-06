@@ -1,7 +1,14 @@
 import { expect, test } from "vitest";
 
-const XO = (str) => {
-  // Your solution
+const XO = (str: string) => {
+  const onlyXOs = str.replace(/[^oxOX.]/gi, '')
+  const onlyXs = onlyXOs.replace(/[?^oO]/gi, '')
+  const onlyOs = onlyXOs.replace(/[?^xX]/gi, '')
+
+  const numOfX = onlyXs.length
+  const numOfO = onlyOs.length
+
+  return numOfX === numOfO ? true : false
 };
 
 test("22. Exes and Ohs", () => {

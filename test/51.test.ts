@@ -1,7 +1,7 @@
 import { expect, test } from "vitest";
 
-const domainName = (url) => {
-  // Your solution
+const domainName = (url: string) => {
+  return url.replace('http://', '').replace('https://', '').replace('www.', '').replace('.com', '').replace('.ca', '').replace('.co.jp', '')
 };
 
 test("51. Extract the Domain Name From a URL", () => {

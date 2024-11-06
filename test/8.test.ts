@@ -1,7 +1,11 @@
 import { expect, test } from "vitest";
 
-const getCount = (str) => {
-  // Your solution
+const getCount = (str: string) => {
+  const strOnlyVowels = str.replace(/[^aeiou.]/g, '')
+
+  console.log(strOnlyVowels)
+
+  return strOnlyVowels.length
 };
 
 test("8. Vowel Count", () => {

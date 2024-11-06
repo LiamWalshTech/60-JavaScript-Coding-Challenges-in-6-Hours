@@ -1,7 +1,14 @@
 import { expect, test } from "vitest";
 
-const findOutlier = (arr) => {
-  // Your solution
+const findOutlier = (arr: Array<number>) => {
+  const evenOrOdd = arr.map(num => num % 2 ? true : false)
+  console.log(evenOrOdd)
+  const oddOneOutIndex = evenOrOdd.reduce((prev, next, index) => {
+    console.log(evenOrOdd[prev] !== next)
+    return evenOrOdd[prev] !== next ? index : prev
+  }, 0)
+
+  return oddOneOutIndex
 };
 
 test("24. Find The Parity Outlier", () => {

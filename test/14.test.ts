@@ -1,7 +1,11 @@
 import { expect, test } from "vitest";
 
-const squareDigits = (num) => {
-  // Your solution
+const squareDigits = (num: number) => {
+  const numsArray = num.toString().split('')
+
+  const squaredNums = numsArray.map(num => Math.pow(Number(num), 2))
+
+  return Number(squaredNums.join(''))
 };
 
 test("14. Square Every Digit", () => {

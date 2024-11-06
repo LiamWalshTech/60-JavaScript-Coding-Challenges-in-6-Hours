@@ -1,7 +1,15 @@
 import { expect, test } from "vitest";
 
 String.prototype.capitalize = function () {
-  // Your solution
+  const thisAsArray = this.split(' ')
+  const capatlizedWords = thisAsArray.map(word => {
+    const firstLetter = word.slice(0, 1).toUpperCase()
+    const restOfLetters = word.slice(1, word.length)
+
+    return `${firstLetter}${restOfLetters}` 
+  })
+
+  return capatlizedWords.join(' ')
 };
 
 test("26. Capitalize Words", () => {

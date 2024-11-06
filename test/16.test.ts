@@ -1,7 +1,9 @@
 import { expect, test } from "vitest";
 
-const highAndLow = (numbers) => {
-  // Your solution
+const highAndLow = (numbers: string) => {
+  const numbersArray = numbers.split(' ').map(num => Number(num)).sort()
+
+  return `${numbersArray.pop()} ${numbersArray.shift()}`
 };
 
 test("16. Highest and Lowest", () => {

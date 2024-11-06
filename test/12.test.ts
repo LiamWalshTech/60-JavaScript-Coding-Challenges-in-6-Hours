@@ -1,7 +1,31 @@
 import { expect, test } from "vitest";
 
-const likes = (names) => {
-  // Your solution
+const likes = (names: Array<string>) => {
+  const lastName = names[names.length - 1]
+  const namesString = names.slice(0, names.length - 1).join(', ')
+
+  switch (names.length) {
+    case 0:
+      return `no one likes this`
+      break;
+
+      case 1:
+      return `${names} likes this`
+      break;
+
+      case 2:
+        return `${namesString} and ${lastName} like this`
+      break;
+
+      case 3:
+        return `${namesString} and ${lastName} like this`
+      break;
+  
+    default:    
+      return `${names.slice(0, names.length - 2).join(', ')} and ${names.length - 2} others like this`
+      break;
+  }
+
 };
 
 test("12. Who likes it?", () => {

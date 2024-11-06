@@ -1,7 +1,7 @@
 import { expect, test } from "vitest";
 
-const getNames = (users) => {
-  // Your solution
+const getNames = (users: Array<{id: string, name: string, startDate: string}>) => {
+  return users.map(user => user.name)
 };
 
 const users = [
@@ -23,5 +23,5 @@ const users = [
 ];
 
 test("57. Get Names", () => {
-  expect(getNames(users)).eq(["Alice", "Bob", "Claire"]);
+  expect(getNames(users)).deep.eq(["Alice", "Bob", "Claire"]);
 });

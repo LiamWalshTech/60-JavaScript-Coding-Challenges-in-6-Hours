@@ -1,7 +1,7 @@
 import { expect, test } from "vitest";
 
-const removeDuplicates = (nums) => {
-  // Your solution
+const removeDuplicates = (nums: Array<number>) => {
+  return Object.keys(nums).length
 };
 
 test("42. Remove Duplicates from Sorted Array", () => {

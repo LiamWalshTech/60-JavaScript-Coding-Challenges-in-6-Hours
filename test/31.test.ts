@@ -1,6 +1,6 @@
 import { expect, test } from "vitest";
 
-const duplicateEncode = (word) => {
+const duplicateEncode = (word: string) => {
   // Your solution
 };
 

@@ -1,7 +1,9 @@
 import { expect, test } from "vitest";
 
-const fib = (steps) => {
-  // Your solution
+const fib = (steps: number) => {
+  return [...Array(steps).keys()].reduce((prev, curr) => {
+    return prev + curr
+  }, 0)
 };
 
 test("34. Fibonacci Number", () => {

@@ -1,10 +1,19 @@
 import { expect, test } from "vitest";
 
-const count = (string) => {
-  // Your solution
+const count = (string: string) => {
+  const strAsArray = string.split('')
+  const letterObjectCount = strAsArray.reduce((acc, letter) => {
+    if (acc.hasOwnProperty(letter)) {
+      acc[letter] = 1
+    }
+
+    acc[letter] = acc[letter] + 1
+  }, {})
+
+  return letterObjectCount
 };
 
 test("48. Count Characters in Your String", () => {
-  expect(count("")).eq({});
-  expect(count("aba")).eq({ a: 2, b: 1 });
+  expect(count("")).deep.eq({});
+  expect(count("aba")).deep.eq({ a: 2, b: 1 });
 });

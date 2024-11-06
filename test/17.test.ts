@@ -1,7 +1,9 @@
 import { expect, test } from "vitest";
 
-const descendingOrder = (n) => {
-  // Your solution
+const descendingOrder = (n: number) => {
+  const nString = n.toString().split('').map(num => Number(num)).sort().reverse().join('')
+
+  return Number(nString)
 };
 
 test("17. Descending Order", () => {

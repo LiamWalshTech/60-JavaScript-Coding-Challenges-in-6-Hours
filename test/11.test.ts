@@ -1,7 +1,11 @@
 import { expect, test } from "vitest";
 
-const getMiddle = (str) => {
-  // Your solution
+const getMiddle = (str: string) => {
+  const strEvenLength = str.length % 2 === 0 ? true: false
+  const middleFrom = strEvenLength ? (str.length / 2) - 1 : Math.floor(str.length / 2) 
+  const middleTo = strEvenLength ? (str.length / 2) + 1 : Math.floor(str.length / 2) + 1
+
+  return str.slice(middleFrom, middleTo)
 };
 
 test("11. Get the Middle Character", () => {

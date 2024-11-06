@@ -1,7 +1,12 @@
 import { expect, test } from "vitest";
 
-const createPhoneNumber = (numbers) => {
-  // Your solution
+const createPhoneNumber = (numbers: Array<number>) => {
+  const firstSection = numbers.slice(0, 3).join('')
+  const secondSection = numbers.slice(3, 6).join('')
+  const thirdSection = numbers.slice(6, 10).join('')
+  const formatedPhoneNumber = `(${firstSection}) ${secondSection}-${thirdSection}`
+
+  return formatedPhoneNumber
 };
 
 test("13. Create Phone Number", () => {

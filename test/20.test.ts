@@ -1,7 +1,10 @@
 import { expect, test } from "vitest";
 
-const findShort = (str) => {
-  // Your solution
+const findShort = (str: string) => {
+  const words = str.split(' ')
+const shortestWord = words.reduce((previousWord, currentWord) => currentWord.length < previousWord.length ? currentWord : previousWord)
+
+return shortestWord.length
 };
 
 test("20. Shortest Word", () => {

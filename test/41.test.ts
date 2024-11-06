@@ -1,7 +1,10 @@
 import { expect, test } from "vitest";
 
-const reverse = (x) => {
-  // Your solution
+const reverse = (x: number) => {
+  const digitsReversed = x.toString().split('').reverse().join('')
+  console.log(digitsReversed)
+
+  return Number(digitsReversed)
 };
 
 test("41. Reverse Integer", () => {

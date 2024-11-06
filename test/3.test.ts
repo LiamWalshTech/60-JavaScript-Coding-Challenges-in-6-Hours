@@ -1,7 +1,15 @@
 import { expect, test } from "vitest";
 
 const past = (h, m, s) => {
-  // Your solution
+  const millisInSeconds = 1000
+  const millisInMinutes = millisInSeconds * 60
+  const millisInHours = millisInMinutes * 60
+
+  const sInMillis = s * millisInSeconds
+  const mInMillis = m * millisInMinutes
+  const hInMillis = h * millisInHours
+
+  return sInMillis + mInMillis + hInMillis
 };
 
 test("3. Clock", () => {

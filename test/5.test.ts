@@ -1,7 +1,16 @@
 import { expect, test } from "vitest";
 
-const century = (year) => {
-  // Your solution
+const century = (year: number) => {
+  if (year <= 100) {
+    return 1
+  }
+
+  const secondHalf = year.toString().slice(2)
+  const firstHalf = Number(year.toString().slice(0, 2))
+
+  const newCentury = secondHalf === '00' ? firstHalf: firstHalf + 1
+
+  return  newCentury
 };
 
 test("5. Century From Year", () => {

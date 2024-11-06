@@ -1,7 +1,7 @@
 import { expect, test } from "vitest";
 
 const greet = (name) => {
-  //Your solution
+  return `Hello, ${name} how are you doing today?`
 };
 
 test("4. Returning Strings", () => {

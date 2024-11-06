@@ -1,7 +1,16 @@
 import { expect, test } from "vitest";
 
-const spinWords = (str) => {
-  // Your solution
+const spinWords = (str: string) => {
+  const words = str.split(' ')
+  const reversedWords = words.map(word => {
+    if (word.length < 5) {
+      return word
+    }
+
+    return word.split('').reverse().join('')
+  })
+
+  return reversedWords.join(' ')
 };
 
 test("19. Stop gninnipS My sdroW!", () => {

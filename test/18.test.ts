@@ -1,7 +1,18 @@
 import { expect, test } from "vitest";
 
-const accum = (str) => {
-  // Your solution
+const accum = (str: string) => {
+  const strAsArray = str.toLocaleLowerCase().split('')
+
+  const strsAlphabetized = strAsArray.map((letter, index) => {
+    const arrayLengthOfPosition = [
+      ...Array(index).keys()
+    ]
+    const xOfLetter = arrayLengthOfPosition.map(() => letter)
+
+    return `${letter.toUpperCase()}${xOfLetter.join('')}`
+  })
+
+  return strsAlphabetized.join('-')
 };
 
 test("18. Mumbling", () => {

@@ -1,7 +1,7 @@
 import { expect, test } from "vitest";
 
-const songDecoder = (song) => {
-  // Your solution
+const songDecoder = (song: string) => {
+  return song.replaceAll('WUB', ' ').replace(/ {2,}/g, ' ').trim()
 };
 
 test("39. Dubstep", () => {

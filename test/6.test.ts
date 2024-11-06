@@ -1,7 +1,9 @@
 import { expect, test } from "vitest";
 
-const litres = (time) => {
-  // Your solution
+const litres = (time: number) => {
+  const litersPerHour = 0.5
+
+  return Math.floor(litersPerHour * time)
 };
 
 test("6. Keep Hydrated!", () => {

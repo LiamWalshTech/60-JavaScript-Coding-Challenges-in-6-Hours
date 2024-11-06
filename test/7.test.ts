@@ -1,7 +1,10 @@
 import { expect, test } from "vitest";
 
-const isDivisible = (n, x, y) => {
-  // Your solution
+const isDivisible = (n: number, x: number, y: number) => {
+  const divisibleByX = n % x === 0 ? true : false
+  const divisibleByY = n % y === 0 ? true : false
+
+  return divisibleByX && divisibleByY
 };
 
 test("7. Is n Divisible by x and y?", () => {

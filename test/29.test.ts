@@ -1,7 +1,27 @@
 import { expect, test } from "vitest";
 
 const fizzBuzz = () => {
-  // Your solution
+  return [...Array(100).keys()].map(num => {
+    const correctedNum = num + 1
+    const isFizz = correctedNum % 3 === 0 ? true : false
+    const isBuzz = correctedNum % 5 === 0 ? true : false
+    const isFizzBuzz = isFizz && isBuzz
+
+    if (isFizzBuzz) {
+      return 'FizzBuzz'
+    }
+
+    if (isFizz) {
+      return 'Fizz'
+    }
+
+    if (isBuzz) {
+      return 'Buzz'
+    }
+
+    return correctedNum
+
+  }).join(',')
 };
 
 test("29. FizzBuzz", () => {

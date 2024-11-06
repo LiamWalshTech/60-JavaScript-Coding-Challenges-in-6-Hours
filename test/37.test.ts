@@ -1,7 +1,21 @@
 import { expect, test } from "vitest";
 
-const uniqueInOrder = (iterable) => {
-  // Your solution
+const uniqueInOrder = (iterable: Array<number> | string) => {
+  let newIterable: Array<number> | Array<string> = iterable
+
+  if (typeof newIterable === 'string') {
+    newIterable = newIterable.split('')
+  }
+
+  return newIterable.reduce((acc, curr, index) => {
+    if (index === 0) {
+      return acc
+    }
+
+    console.log(acc[index - 1])
+
+    return acc[index - 1] == curr ? acc : [...acc, curr]
+  }, [])
 };
 
 test("37. Unique In Order", () => {

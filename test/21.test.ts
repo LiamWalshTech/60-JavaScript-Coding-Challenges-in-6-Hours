@@ -1,7 +1,16 @@
 import { expect, test } from "vitest";
 
-const countBits = (n) => {
-  // Your solution
+const countBits = (n: number) => {
+  // n as binary
+  const nBinary = n.toString(2)
+
+  // binary as string
+  const nBinaryString = nBinary.toString()
+
+  // count the number of 1s in the string
+  const numOfBytes = nBinaryString.split('').filter(num => num === '1').length
+
+  return numOfBytes
 };
 
 test("21. Bit Counting", () => {

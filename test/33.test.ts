@@ -1,7 +1,28 @@
 import { expect, test } from "vitest";
 
-const persistence = (num) => {
-  // Your solution
+const persistence = (num: number) => {
+  let loops = 0
+
+  const productOfDigits = (digits: Array<number>) => {
+    const multiplied = digits.reduce((prev, curr) => {
+      return prev * curr
+    }, 1)
+
+    return multiplied
+  }
+
+  const numAsArray = (num: number) => num.toString().split('').map(digit => Number(digit))
+
+  let isSingleDigitNow = false
+  let mutatedNumAsArray = numAsArray(num)
+  while (isSingleDigitNow) {
+    const product = productOfDigits(mutatedNumAsArray)
+
+    product < 10 ? isSingleDigitNow = true : null
+    console.log(product, isSingleDigitNow)
+  }
+
+  return loops
 };
 
 test("33. Persistent Bugger", () => {

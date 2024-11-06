@@ -1,7 +1,13 @@
 import { expect, test } from "vitest";
 
-const isSquare = (n) => {
-  // Your solution
+const isSquare = (n: number) => {
+  if (n === 0) {
+    return true
+  }
+
+  const squareRoot = Math.sqrt(n)
+
+  return squareRoot % 1 === 0 ? true: false
 };
 
 test("15. You're a Square!", () => {

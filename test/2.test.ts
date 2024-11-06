@@ -1,7 +1,7 @@
 import { expect, test } from "vitest";
 
 const even_or_odd = (number) => {
-  // Your solution
+  return number % 2 === 0 ? 'Even' : 'Odd'
 };
 
 test("2. Even or Odd", () => {

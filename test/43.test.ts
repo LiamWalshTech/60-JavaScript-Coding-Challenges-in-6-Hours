@@ -1,7 +1,10 @@
 import { expect, test } from "vitest";
 
-const kidsWithCandies = (candies, extraCandies) => {
-  // Your solution
+const kidsWithCandies = (candies: Array<number>, extraCandies: number) => {
+  // loop through and give each child the extra candies
+  // establish what the most candies is originally
+  // establish a min max for each child
+  // compare from there
 };
 
 test("43. Kids With the Greatest Number of Candies", () => {

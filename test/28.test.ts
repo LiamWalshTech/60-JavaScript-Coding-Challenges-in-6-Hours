@@ -1,7 +1,17 @@
 import { expect, test } from "vitest";
 
-const isIsogram = (str) => {
-  // Your solution
+const isIsogram = (str: string) => {
+  const strAsArray = str.split('')
+  const letterObjectCount = strAsArray.reduce((acc, letter) => {
+    if (acc.hasOwnProperty(letter)) {
+      acc[letter] = 1
+      
+    }
+
+    acc[letter] = acc[letter] + 1
+  }, {})
+
+  console.log(letterObjectCount)
 };
 
 test("28. Isograms", () => {

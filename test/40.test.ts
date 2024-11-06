@@ -1,7 +1,7 @@
 import { expect, test } from "vitest";
 
-const isValid = (s) => {
-  // Your solution
+const isValid = (s: string) => {
+  // 
 };
 
 test("40. Valid Parentheses", () => {
